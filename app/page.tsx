@@ -72,25 +72,18 @@ export default function Home() {
             </div>
 
             {/* Left: Text */}
-            <div className="relative flex h-full flex-col justify-center space-y-8">
-            <div className="inline-flex items-center gap-2 rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-700">
+            <div className="relative flex h-full flex-col justify-center space-y-8 pr-4 md:pr-8">
+            <div className="inline-flex w-fit items-center gap-2 rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-700">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
               Modern hero exploration
             </div>
 
             <div className="space-y-4">
-              <h1 className="text-balance text-4xl font-semibold tracking-tight text-zinc-900 sm:text-5xl lg:text-6xl">
-                Dummy headline for your
-                <span className="relative whitespace-nowrap">
-                  {" "}
-                  standout hero
-                  <span className="pointer-events-none absolute inset-x-0 bottom-0 h-2 translate-y-1 bg-gradient-to-r from-indigo-300/80 via-sky-300/70 to-fuchsia-300/70" />
-                </span>
+              <h1 className="text-balance max-w-lg text-3xl font-semibold leading-tight tracking-tight text-zinc-900 sm:text-4xl lg:text-5xl">
+              Empowering Global Trade With Integrity & Innovation
               </h1>
-              <p className="max-w-xl text-pretty text-base leading-relaxed text-zinc-600 sm:text-lg">
-                Replace this with your own value proposition. A clear one–two sentence
-                explanation of what you do, who you help, and why it matters. Keep it
-                short, confident, and specific.
+              <p className="max-w-md text-pretty text-base leading-relaxed text-zinc-600">
+              ZEXFRO International Ltd. – A trusted partner for worldwide import, export & supply chain excellence.
               </p>
             </div>
 
@@ -181,8 +174,13 @@ export default function Home() {
                   </svg>
                 </a>
               </div>
-              <div className="relative h-[400px] overflow-hidden rounded-2xl bg-zinc-100 shadow-lg">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#0033CC]/10 to-[#000814]/5" />
+              <div className="relative h-[400px] overflow-hidden rounded-2xl shadow-lg">
+                <Image
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
+                  alt="Corporate office building"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -285,16 +283,35 @@ export default function Home() {
 
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {[
-                { title: "Premium Industrial Chemicals", desc: "High-grade chemicals for manufacturing" },
-                { title: "Heavy Construction Materials", desc: "Bulk materials for infrastructure projects" },
-                { title: "Agricultural Commodities", desc: "Quality produce and farming supplies" },
-                { title: "Consumer & FMCG Items", desc: "Fast-moving consumer goods" }
+                { 
+                  title: "Premium Industrial Chemicals", 
+                  desc: "High-grade chemicals for manufacturing",
+                  image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&q=80"
+                },
+                { 
+                  title: "Heavy Construction Materials", 
+                  desc: "Bulk materials for infrastructure projects",
+                  image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=80"
+                },
+                { 
+                  title: "Agricultural Commodities", 
+                  desc: "Quality produce and farming supplies",
+                  image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&q=80"
+                },
+                { 
+                  title: "Consumer & FMCG Items", 
+                  desc: "Fast-moving consumer goods",
+                  image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&q=80"
+                }
               ].map((product, idx) => (
                 <div key={idx} className="group rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm hover:shadow-lg transition-all">
-                  <div className="mb-4 h-40 overflow-hidden rounded-xl bg-gradient-to-br from-zinc-100 to-zinc-50">
-                    <div className="flex h-full items-center justify-center text-4xl opacity-40">
-                      📦
-                    </div>
+                  <div className="relative mb-4 h-40 overflow-hidden rounded-xl">
+                    <Image
+                      src={product.image}
+                      alt={product.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
                   <h3 className="mb-2 text-base font-semibold text-[#1A1A1A]">
                     {product.title}
@@ -470,7 +487,14 @@ export default function Home() {
 
             <div className="grid gap-8 md:grid-cols-3">
               <article className="group rounded-2xl border border-zinc-200 bg-white shadow-sm hover:shadow-lg transition-all overflow-hidden">
-                <div className="h-48 bg-gradient-to-br from-[#0033CC]/10 to-zinc-100" />
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80"
+                    alt="Global trade trends"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
                 <div className="p-6">
                   <div className="mb-2 text-xs font-semibold text-zinc-500">
                     INDUSTRY TRENDS
@@ -491,7 +515,14 @@ export default function Home() {
               </article>
 
               <article className="group rounded-2xl border border-zinc-200 bg-white shadow-sm hover:shadow-lg transition-all overflow-hidden">
-                <div className="h-48 bg-gradient-to-br from-[#8CD600]/10 to-zinc-100" />
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80"
+                    alt="Import compliance"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
                 <div className="p-6">
                   <div className="mb-2 text-xs font-semibold text-zinc-500">
                     COMPLIANCE
@@ -512,7 +543,14 @@ export default function Home() {
               </article>
 
               <article className="group rounded-2xl border border-zinc-200 bg-white shadow-sm hover:shadow-lg transition-all overflow-hidden">
-                <div className="h-48 bg-gradient-to-br from-[#000814]/10 to-zinc-100" />
+                <div className="relative h-48 overflow-hidden">
+            <Image
+                    src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&q=80"
+                    alt="Supply chain optimization"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
                 <div className="p-6">
                   <div className="mb-2 text-xs font-semibold text-zinc-500">
                     SUPPLY CHAIN
